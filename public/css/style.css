@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #000;
+}
+/* CSS for header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e2e9f7;
+}
+
+.header .logo {
+  font-size: 40px;
+  font-family: 'Sriracha', cursive;
+  color: #0d74f5;
+  text-decoration: none;
+  margin-left: 30px;
+}
+
+.nav-items {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #e2e9f7;
+  margin-right:100px;
+}
+
+.nav-items a {
+  text-decoration: none;
+  color: #0d74f5;
+  padding: 35px 20px;
+  font-size: 20px;
+  
+}
+.nav-items .btnLogin-popup{
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 3px solid #0e91dd;
+    outline: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.0em;
+    color: #000;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: 1s;
+}
+
+.nav-items .btnLogin-popup:hover{
+    background: #669fe3;
+    color: black;
+}
+
+/* CSS for main section */
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 600px;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url("../images/animal.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.intro h1 {
+  font-family: sans-serif;
+  font-size: 50px;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.intro p {
+  font-size: 20px;
+  color: #d1d1d1;
+  text-transform: uppercase;
+  margin: 20px 0;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #000;
+  margin: 0;
+  padding: 0;
+}
+.achievements {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 40px 100px;
+  background-color: #e2e9f7;
+  height: 300px;
+  padding-bottom: 70px;
+  padding-top: 50px;
+}
+
+.achievements .work {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 40px;
+}
+
+.achievements .work i {
+  width: fit-content;
+  font-size: 50px;
+  color: #333333;
+  border-radius: 50%;
+  border: 2px solid #333333;
+  padding: 12px;
+}
+
+.achievements .work .work-heading {
+  font-size: 20px;
+  color: #333333;
+  text-transform: uppercase;
+  margin: 10px 0;
+}
+
+.achievements .work .work-text {
+  font-size: 25px;
+  color: #585858;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.about-me {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 160px;
+  border-top: 2px solid #e2e9f7;
+  background-color: #e2e9f7;
+}
+
+.about-me img {
+  width: 350px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-left: 60px;
+}
+
+.about-me-text h2 {
+  font-size: 40px;
+  color: #2c7fe4;
+  text-transform: uppercase;
+  margin-top: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.about-me-text p {
+  font-size: 22px;
+  color: #4c709c;
+  margin: 10px 0;
+  font-family: "Poppins", sans-serif;
+  justify-content: left;
+}
+/* CSS for footer */
+
+.footer {
+  background-color: #2c7fe4;
+  padding: 40px 0;
+}
+
+.footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: 180px;
+}
+
+.footer-col {
+  flex: 1 1 300px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.footer-col h4 {
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 15px;
+  ;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.footer-col ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.social-links a {
+  display: inline-block;
+  margin-right: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: #000;
+}
+
+#receiver{
+  display: none;
+}

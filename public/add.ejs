@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="add_style.css">
+    <title>Your Blog</title>
+</head>
+<body>
+    <header>
+        <h1>Your Blog</h1>
+    </header>
+    <main>
+        <section class="blogger-input">
+            <form class="blog-form" action="/added" method="post">
+                <div class="form-page active">
+                    <label for="image-source">Image Source:</label>
+                    <input name="imageSrc" type="text" id="image-source" name="image-source" required>
+                    
+                    <label for="blog-title">Title:</label>
+                    <input name="title" type="text" id="blog-title" name="blog-title" required>
+                    
+                    <label for="blog-description">Description:</label>
+                    <input name="description" type="text" id="blog-description" name="blog-description" required>
+                    
+                    <label for="blog-introduction">Introduction:</label>
+                    <textarea name="introduction" id="blog-introduction" name="blog-introduction" required></textarea>
+                    
+                    <button class="next-button" data-page="2">Next</button>
+                </div>
+                <div class="form-page">
+                    <label for="blog-details">Details:</label>
+                    <textarea name="detailed" id="blog-details" name="blog-details" required></textarea>
+                    
+                    <label for="blog-author">Author:</label>
+                    <input name="author" type="text" id="blog-author" name="blog-author" required>
+                    
+                    <label for="blog-conclusion">Conclusion:</label>
+                    <textarea name="conclusion" id="blog-conclusion" name="blog-conclusion" required></textarea>
+                    
+                    <label for="blog-date">Date:</label>
+                    <input name="date" type="date" id="blog-date" name="blog-date" required>
+                    
+                    <button class="prev-button" data-page="1">Previous</button>
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    
+    <script src="add_script.js"></script>
+</body>
+</html>

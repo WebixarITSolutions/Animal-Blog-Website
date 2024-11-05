@@ -1,0 +1,92 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+header {
+  margin-bottom: 20px;
+}
+
+footer {
+  margin-top: 20px;
+}
+
+/* Navbar Styles */
+.navbar {
+  padding: 1rem;
+}
+
+.navbar-brand img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.navbar-nav .nav-link {
+  color: #f8f9fa !important;
+  font-size: 1rem;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ced4da !important;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url('data:image/svg+xml;charset=utf8,%3csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"%3e%3cpath stroke="rgba(255,255,255,1)" stroke-width="2" d="M 5 7 L 25 7" /%3e%3cpath stroke="rgba(255,255,255,1)" stroke-width="2" d="M 5 15 L 25 15" /%3e%3cpath stroke="rgba(255,255,255,1)" stroke-width="2" d="M 5 23 L 25 23" /%3e%3c/svg%3e');
+}
+
+/* Main Content Styles */
+main {
+  padding: 2rem 0;
+}
+
+.card {
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card-img-top {
+  border-bottom: 1px solid #dee2e6;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.card-text {
+  font-size: 1rem;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #343a40;
+  color: #ffffff;
+}
+
+footer h5 {
+  margin-bottom: 1rem;
+}
+
+footer .d-flex a {
+  font-size: 1.5rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .navbar-nav {
+    text-align: center;
+  }
+}

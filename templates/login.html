@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Login | Animal Blog Website</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}" />
+    <!-- Add Bootstrap for alerts styling -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #e2e9f7;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
+}
+
+.center h1 {
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: 1px solid silver;
+}
+
+.center form {
+  padding: 0 40px;
+}
+
+.txt_field {
+  position: relative;
+  margin: 30px 0;
+  border-bottom: 2px solid #adadad;
+}
+
+.txt_field input {
+  width: 100%;
+  height: 40px;
+  padding: 0 5px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.txt_field label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color: #adadad;
+  font-size: 16px;
+  transform: translateY(-50%);
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.txt_field span::before {
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #2691d9;
+  transition: 0.5s;
+}
+
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label {
+  top: -5px;
+  color: #2691d9;
+}
+
+.txt_field input:focus ~ span::before,
+.txt_field input:valid ~ span::before {
+  width: 100%;
+}
+
+.pass {
+  margin: -5px 0 20px 5px;
+  color: #a6a6a6;
+  cursor: pointer;
+  transition: text-decoration 0.3s;
+}
+
+.pass:hover {
+  text-decoration: underline;
+}
+
+input[type='submit'] {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #4070f4;
+  background: #4070f4;
+  border-radius: 25px;
+  font-size: 18px;
+  color: #e9f4fb;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.5s;
+}
+
+input[type='submit']:hover {
+  border-color: #2691d9;
+}
+
+.signup_link {
+  margin: 30px 0;
+  text-align: center;
+  font-size: 16px;
+  color: #666666;
+}
+
+.signup_link a {
+  color: #2691d9;
+  text-decoration: none;
+  transition: text-decoration 0.3s;
+}
+
+.signup_link a:hover {
+  text-decoration: underline;
+}
+
+    </style>
+    
+    <div class="center">
+      <h1>Login</h1>
+
+      <!-- Flash messages (alerts) -->
+      {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+          <div class="alerts">
+            {% for category, message in messages %}
+              <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                {{ message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+            {% endfor %}
+          </div>
+        {% endif %}
+      {% endwith %}
+
+      <form method="post" action="{{ url_for('login') }}">
+        {{ form.hidden_tag() }}
+        <div class="txt_field">
+          {{ form.email(class="form-control", placeholder="Email") }}
+          <span></span>
+        </div>
+        <div class="txt_field">
+          {{ form.password(class="form-control", placeholder="Password") }}
+          <span></span>
+        </div>
+        <input type="submit" value="Login" />
+        <div class="signup_link">
+          Not a member? <a href="{{ url_for('register') }}">Signup</a>
+        </div>
+      </form>
+    </div>
+
+    <!-- Bootstrap JS for alert dismissing functionality -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

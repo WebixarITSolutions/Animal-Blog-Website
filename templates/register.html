@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Registration | Animal Blog Website</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/register.css') }}" />
+  </head>
+  <body>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e2e9f7;
+}
+
+.container {
+  position: relative;
+  max-width: 900px;
+  width: 100%;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container header {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.container header::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 3px;
+  width: 27px;
+  border-radius: 8px;
+  background-color: #4070f4;
+}
+
+.container form {
+  position: relative;
+  min-height: 390px;
+}
+
+.container .form {
+  position: absolute;
+  background-color: #fff;
+  transition: 0.3s ease;
+}
+
+.form.second,
+.form.third {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(100%);
+}
+
+form.secActive .form.second,
+form.secActive .form.third {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(0);
+}
+
+form.secActive .form.first {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-100%);
+}
+
+.title {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #333;
+}
+
+.fields {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.input-field {
+  display: flex;
+  width: calc(100% / 2 - 15px);
+  flex-direction: column;
+  margin: 4px 0;
+}
+
+.input-field input,
+.input-field select {
+  width: 100%;
+  padding: 5px;
+  height: 40px;
+  font-size: 14px;
+  color: #333;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  margin: 8px 0;
+  outline: none;
+}
+
+.input-field input:is(:focus, :valid) {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13);
+}
+
+.input-field input[type='date'] {
+  color: #707070;
+}
+
+.input-field input[type='date']:valid {
+  color: #333;
+}
+
+label {
+  font-size: 12px;
+  font-weight: 500;
+  color: #2e2e2e;
+}
+
+button,
+.backBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  max-width: 200px;
+  width: 100%;
+  text-align: center;
+  margin: 25px 50px 25px 0;
+  color: #fff;
+  background-color: #4070f4;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s linear;
+}
+
+button:hover {
+  background-color: #265df2;
+}
+
+.backBtn i {
+  transform: rotate(180deg);
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.btnText {
+  margin-right: 14px;
+}
+
+    </style>
+    <div class="container">
+      <h1>Registration</h1>
+      <br />
+      <form method="post" action="{{ url_for('register') }}">
+        {{ form.hidden_tag() }}
+
+        <div class="form-section">
+          <div class="details personal">
+            <h1 class="title">Account Details</h1>
+
+            <div class="fields">
+              <div class="input-field">
+                {{ form.username.label }}
+                {{ form.username(class="form-control", placeholder="Enter your username") }}
+              </div>
+              <div class="input-field">
+                {{ form.email.label }}
+                {{ form.email(class="form-control", placeholder="Enter your email") }}
+              </div>
+              <div class="input-field">
+                {{ form.password.label }}
+                {{ form.password(class="form-control", placeholder="Enter Password") }}
+              </div>
+              <div class="input-field">
+                {{ form.confirm_password.label }}
+                {{ form.confirm_password(class="form-control", placeholder="Confirm Password") }}
+              </div>
+            </div>
+          </div>
+          <br />
+        </div>
+
+        <div class="buttons">
+          <button type="submit" class="nextBtn">
+            <span class="btnText">Register</span>
+            <i class="uil uil-navigator"></i>
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,16 +1,56 @@
-# Animal-Blog-Website
+# Animal Blog Website
 
-# Project Overview:
-Our blog website isn't just a platform for words; it's a canvas for ideas and narratives that deserve to shine. We're calling upon collaborators to harness their coding prowess to not only craft a stunning user interface (UI) but also to breathe new life into the functionality that underpins our blogosphere.
+**Animal Blog Website** is an interactive platform for animal enthusiasts, pet owners, and wildlife lovers to share stories, experiences, and information about various animals. Developed by **Webixar IT Solutions**, this website allows users to post blogs, explore pet recommendations, and access support through an AI chatbot.
 
-# Your Role and Contributions:
-Whether you're a frontend magician or a backend architect, your skills are a precious ingredient in this endeavor. Here's how you can make an impact:
+## Features
 
-# 1. UI/UX Masterstroke:
-Transcend the ordinary with an aesthetic that makes readers' hearts skip a beat. Collaborate with our design artisans to bring their visions to life. Craft an immersive, visually pleasing, and responsive UI that enriches the reading experience. Your mastery of HTML, CSS, and JavaScript will sculpt a UI that encourages exploration and discovery.
+1. **Responsive UI**: User-friendly and adaptable across devices.
+2. **Blog Management**: Users can post, read, and explore blogs by category.
+3. **Authentication**: Secure user login and registration.
+4. **Visitor Tracking**: Real-time analytics on site visits.
+5. **AI Chatbot**: Offers support, answers questions, and assists with navigation.
+6. **Pet Recommender**: Suggests dog breeds based on user preferences.
 
-# 2. Functional Marvels:
-Infuse the backend with functionalities that empower both writers and readers. Develop features that make content creation a breeze, from easy-to-use content editors to streamlined publishing workflows. Delve into the intricacies of user authentication, commenting systems, search functionality, and social media integration. Your backend prowess (Node.js, Python, Ruby, etc.) will transform the reading experience.
+## Tech Stack
 
-# 3. Innovate and Elevate:
-Dream big and propose innovative features that reinvent the way we interact with content. Think gamified engagement, personalized reading recommendations, dynamic content categorization, and beyond. Your creative spark will usher in a new era of content consumption.
+- **Frontend**: HTML, CSS, Bootstrap, JavaScript
+- **Backend**: Python (Flask)
+- **Database**: PostgreSQL
+- **Libraries**: TfidfVectorizer, Cosine Similarity, Flask templating
+
+## Installation
+
+### Prerequisites
+
+- Python 3.8+
+- PostgreSQL
+
+### Setup Instructions
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/chinmaykatdare05/Animal-Blog-Website.git
+   cd animal-blog-website
+   ```
+
+2. **Install dependencies:**
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Set up PostgreSQL database:**
+
+- Create a new PostgreSQL database for the project.
+- Update database credentials in the `config.py` file.
+
+4. **Run the application:**
+   ```bash
+   flask run
+   ```
+
+## System Block Diagram
+
+The system architecture of the Animal Blog Website supports multiple core functions, including user registration, login, blogging, and personalized pet recommendations. Users interact with the website through a web interface to view, register, log in, and contribute content, all managed through a central platform. Blog content is stored in a backend database, allowing users to read, engage with, and add their own posts. A key feature is the Pet (Dog Breed) Recommender, which uses algorithms like collaborative or content-based filtering to suggest suitable dog breeds based on user preferences. Additionally, an AI Bot Helper enhances user experience by providing personalized assistance, tips, and answers to common questions.
+

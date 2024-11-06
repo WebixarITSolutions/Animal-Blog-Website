@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Animal Blog Website | Add Blog</title>
+    <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS v5.3.2 -->
+     <link rel="stylesheet" href="css/blogs.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="add_style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        
+      </nav>
+    </header>
+
+    <main class="container my-4">
+      <section class="blogger-input">
+        <a href="{{ url_for('dashboard') }}" >
+          <button class="buttonfly">Go Back</button>
+        </a>
+        <h1 class="mb-4 text-center">Add Your Blog</h1>
+        <hr>
+        <br>
+        <form action="/added" method="post">
+          <div class="form-page active">
+            <!-- Blog Information -->
+            <div class="mb-3">
+              <label for="image-source" class="form-label"
+                >Featured Image</label
+              >
+              <input
+                name="imageSrc"
+                type="text"
+                id="image-source"
+                class="form-control"
+                placeholder="Image URL"
+                required />
+            </div>
+
+            <div class="mb-3">
+              <label for="blog-title" class="form-label">Title</label>
+              <input
+                name="title"
+                type="text"
+                id="blog-title"
+                class="form-control"
+                required />
+            </div>
+
+            <div class="mb-3">
+              <label for="blog-date" class="form-label">Date</label>
+              <input
+                name="date"
+                type="date"
+                id="blog-date"
+                class="form-control"
+                required />
+            </div>
+
+            <div class="mb-3">
+              <label for="blog-author" class="form-label">Author</label>
+              <input
+                name="author"
+                type="text"
+                id="blog-author"
+                class="form-control"
+                required />
+            </div>
+
+
+
+            <div class="mb-3">
+              <label for="blog-description" class="form-label"
+                >Description</label
+              >
+              <input
+                name="description"
+                type="text"
+                id="blog-description"
+                class="form-control"
+                required />
+            </div>
+
+            <div class="mb-3">
+              <label for="blog-introduction" class="form-label"
+                >Introduction</label
+              >
+              <textarea
+                name="introduction"
+                id="blog-introduction"
+                class="form-control"
+                rows="5"
+                required></textarea>
+            </div>
+
+
+          </div>
+
+          <div class="form-page">
+            <!-- Details and Conclusion -->
+            <div class="mb-3">
+              <label for="blog-details" class="form-label">Details</label>
+              <textarea
+                name="details"
+                id="blog-details"
+                class="form-control"
+                rows="5"
+                required></textarea>
+            </div>
+
+            <div class="mb-3">
+              <label for="blog-conclusion" class="form-label">Conclusion</label>
+              <textarea
+                name="conclusion"
+                id="blog-conclusion"
+                class="form-control"
+                rows="5"
+                required></textarea>
+            </div>
+
+            <!-- Tags Section -->
+            <div class="mb-3">
+              <label for="blog-tags" class="form-label">Tags</label>
+              <input
+                name="tags"
+                type="text"
+                id="blog-tags"
+                class="form-control"
+                placeholder="Add comma-separated tags (e.g., wildlife, conservation, mammals)"
+                required />
+            </div>
+          </div>
+
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div> 
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="bg-dark text-light text-center py-4">
+      <div class="container">
+        <h5>Follow Us</h5>
+        <div class="d-flex justify-content-center mb-3">
+          <a
+            href="https://facebook.com"
+            class="text-light mx-2"
+            target="_blank">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="https://twitter.com" class="text-light mx-2" target="_blank">
+            <i class="bi bi-twitter"></i>
+          </a>
+          <a
+            href="https://instagram.com"
+            class="text-light mx-2"
+            target="_blank">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a
+            href="https://linkedin.com"
+            class="text-light mx-2"
+            target="_blank">
+            <i class="bi bi-linkedin"></i>
+          </a>
+        </div>
+        <p>&copy; All Rights Reserved. Animal Blog Website</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"></script>
+
+    <script src="add_script.js"></script>
+  </body>
+</html>
